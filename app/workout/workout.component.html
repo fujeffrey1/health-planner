@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h3 style="text-align: center;">{{ workout }} Program</h3>
+    <hr>
+    <div *ngIf="workout === 'Strength'; else weightloss">
+      <app-workout-strength></app-workout-strength>
+    </div>
+    <ng-template #weightloss>
+      <app-workout-weightloss></app-workout-weightloss>
+    </ng-template>
+  </div>
+</div>
